@@ -1,0 +1,173 @@
+.bf-landing-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.bf-landing-card {
+  max-width: 750px;
+  width: 90%;
+  background: rgba(17, 18, 22, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(99, 102, 241, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bf-landing-card:focus-within {
+  border-color: #8b5cf6;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(139, 92, 246, 0.25),
+    0 0 40px rgba(6, 182, 212, 0.15);
+}
+
+.bf-card-label {
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.bf-card-textarea {
+  width: 100%;
+  resize: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: inherit;
+}
+
+.bf-card-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.bf-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 16px;
+  margin-top: 12px;
+}
+
+.bf-card-footer-logo {
+  color: #475569;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+
+.bf-btn-generate {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(90deg, #38bdf8, #8b5cf6, #ec4899, #38bdf8);
+  background-size: 200% auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
+  animation: buttonNeonShimmer 5s linear infinite;
+  font-family: inherit;
+}
+
+.bf-btn-generate:hover {
+  transform: scale(1.03);
+  box-shadow: 
+    0 4px 20px rgba(139, 92, 246, 0.5),
+    0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.bf-btn-generate:disabled {
+  background: #17181c;
+  color: #475569;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  cursor: not-allowed;
+  opacity: 0.6;
+  animation: none;
+  box-shadow: none;
+  transform: none;
+}
+
+@keyframes buttonNeonShimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Suggested Prompts Section */
+.bf-suggested-prompts-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  max-width: 750px;
+  width: 90%;
+}
+
+.bf-sps-label {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.bf-sps-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.bf-sps-chip {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.bf-sps-chip:hover {
+  border-color: #06b6d4;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.2);
+  color: #fff;
+  background: rgba(6, 182, 212, 0.04);
+}
+
+.bf-sps-chip.active {
+  border-color: #ec4899;
+  box-shadow: 0 0 12px rgba(236, 72, 153, 0.25);
+  color: #fff;
+  background: rgba(236, 72, 153, 0.08);
+}
+
+.bf-sps-chip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}

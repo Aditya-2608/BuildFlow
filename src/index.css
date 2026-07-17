@@ -1,0 +1,57 @@
+:root {
+  --bg: #0B0B0F;
+  --bg-secondary: #111216;
+  --surface: #17181C;
+  --border: rgba(255, 255, 255, 0.08);
+  --text-primary: #F8F8F8;
+  --text-secondary: #A1A1AA;
+  --accent: #6366F1;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+
+  --font-heading: 'Plus Jakarta Sans', 'Geist', 'Inter', sans-serif;
+  --font-body: 'Inter', 'Geist', sans-serif;
+  --font-mono: 'Geist Mono', Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

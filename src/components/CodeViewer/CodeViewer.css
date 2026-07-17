@@ -1,0 +1,140 @@
+.bf-code-viewer {
+  background: #090d16;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 14px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.bf-cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f1524;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0 12px;
+}
+
+.bf-cv-tabs {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.bf-cv-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.bf-cv-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #64748b;
+  padding: 12px 14px;
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.bf-cv-tab:hover {
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.bf-cv-tab.active {
+  color: #60a5fa;
+  border-bottom-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.bf-cv-tab-icon {
+  opacity: 0.7;
+}
+
+.bf-cv-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.bf-cv-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.bf-cv-copy-btn svg.copied {
+  color: #10b981;
+}
+
+.bf-cv-path {
+  background: #070a12;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  color: #475569;
+  padding: 6px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.bf-cv-body {
+  display: flex;
+  font-family: Menlo, Monaco, Consolas, "Fira Code", monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-x: auto;
+  max-height: 400px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+}
+
+.bf-cv-body::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.bf-cv-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.bf-cv-line-numbers {
+  padding: 14px 0 14px 12px;
+  text-align: right;
+  color: #334155;
+  user-select: none;
+  background: #070a12;
+  border-right: 1px solid rgba(255, 255, 255, 0.03);
+  min-width: 28px;
+}
+
+.bf-cv-line-no {
+  padding-right: 8px;
+}
+
+.bf-cv-pre {
+  margin: 0;
+  padding: 14px 16px;
+  color: #e2e8f0;
+  background: #090d16;
+  flex: 1;
+  overflow-x: auto;
+}
+
+.bf-cv-pre code {
+  font-family: inherit;
+}

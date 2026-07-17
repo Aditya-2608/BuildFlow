@@ -1,0 +1,94 @@
+.bf-folder-tree {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+  color: #cbd5e1;
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 14px;
+  user-select: none;
+  max-height: 280px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+.bf-folder-tree::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bf-folder-tree::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+
+.bf-tree-node {
+  display: flex;
+  flex-direction: column;
+}
+
+.bf-tree-row {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.bf-tree-row.directory:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+.bf-tree-row.file {
+  cursor: default;
+}
+
+.bf-tree-row.file:hover {
+  background: rgba(255, 255, 255, 0.02);
+  color: #f1f5f9;
+}
+
+.bf-tree-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: #64748b;
+  margin-right: 4px;
+}
+
+.bf-tree-arrow-spacer {
+  width: 20px;
+}
+
+.bf-tree-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+}
+
+.bf-tree-icon.folder {
+  color: #60a5fa;
+}
+
+.bf-tree-icon.file {
+  color: #94a3b8;
+}
+
+.bf-tree-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bf-tree-empty {
+  font-size: 13px;
+  color: #64748b;
+  font-style: italic;
+  padding: 8px;
+}

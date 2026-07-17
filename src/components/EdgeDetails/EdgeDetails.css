@@ -1,0 +1,4 @@
+/* Reuses sliding inspector container styles from ComponentInspector.css */
+.bf-edge-inspector {
+  --accent: #38bdf8;
+}
